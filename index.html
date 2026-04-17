@@ -32,13 +32,13 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-top: -15vh; 
+            margin-top: -10vh; 
         }
 
         .logo {
-            width: 340px; 
+            width: 140px; 
             height: auto;
-            margin-bottom: 6px; /* Ajustado conforme seu último pedido */
+            margin-bottom: 4px;
         }
 
         .frase {
@@ -63,20 +63,28 @@
             font-size: 13pt;
             font-weight: bold;
             transition: background-color 0.2s;
+            display: inline-block;
         }
 
-        .btn:hover {
-            background-color: #5a00cc;
-        }
-
-        @media (max-width: 480px) {
+        /* AJUSTES EXCLUSIVOS PARA CELULAR */
+        @media (max-width: 600px) {
+            .container {
+                margin-top: -5vh; /* Ajusta a altura no mobile */
+            }
             .frase { 
-                font-size: 14pt; 
-                white-space: normal; 
+                font-size: 18px; /* Tamanho solicitado: 18px */
+                white-space: normal; /* Permite a quebra de linha */
+                line-height: 1.4;
+                width: 90%;
+            }
+            .social-links {
+                flex-direction: column; /* Empilha os botões verticalmente */
+                gap: 15px;
+                width: 100%;
             }
             .btn {
-                padding: 10px 25px;
-                font-size: 11pt;
+                width: 200px; /* Largura fixa para os botões ficarem iguais no celular */
+                padding: 12px 0;
             }
         }
     </style>
@@ -86,7 +94,7 @@
     <div class="container">
         <img src="logo-transparente-ago3.png" alt="Logo AGO3" class="logo">
         
-        <p class="frase">Agência criativa em São José do Rio Preto.</p>
+        <p class="frase">Agência criativa em <br> São José do Rio Preto.</p>
 
         <div class="social-links">
             <a href="https://www.instagram.com/ago3.agencia/" target="_blank" class="btn">Instagram</a>
