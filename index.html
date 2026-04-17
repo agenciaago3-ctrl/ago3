@@ -4,24 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGO3</title>
+
+    <meta property="og:title" content="AGO3">
+    <meta property="og:description" content="Agência Criativa">
+    <meta property="og:image" content="https://ago3.com.br/og.jpg">
+    <meta property="og:url" content="https://ago3.com.br">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            /* Usando a cor verde exata da sua imagem */
-            background-color: #92FF00;
+            min-height: 100vh;
+            background-color: #92FF00; /* Cor verde da referência */
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
         }
-        img {
-            max-width: 300px; /* Ajuste o tamanho do logo aqui */
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .logo {
+            max-width: 500px; /* Tamanho do logo ajustado */
             height: auto;
+            margin-bottom: 20px;
+        }
+
+        .frase {
+            font-weight: 300; /* Light */
+            font-size: 46pt; /* Tamanho exato solicitado */
+            color: #000000;
+            margin-bottom: 40px;
+            line-height: 1.2;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.7;
+        }
+
+        .social-links img {
+            width: 40px; /* Tamanho dos ícones */
+            height: auto;
+        }
+
+        /* Ajuste para telas menores (Celular) */
+        @media (max-width: 600px) {
+            .frase {
+                font-size: 28pt;
+            }
+            .logo {
+                max-width: 80%;
+            }
         }
     </style>
 </head>
 <body>
-    <img src="logo-transparente.png" alt="Logo AGO3 Transparente">
+
+    <div class="container">
+        <img src="logo-transparente.png" alt="Logo AGO3" class="logo">
+
+        <h1 class="frase">o futuro é agora.</h1>
+
+        <div class="social-links">
+            <a href="https://www.instagram.com/ago3.agencia/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
+            </a>
+            <a href="https://wa.me/5517996750980" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384055.png" alt="WhatsApp">
+            </a>
+        </div>
+    </div>
+
 </body>
 </html>
