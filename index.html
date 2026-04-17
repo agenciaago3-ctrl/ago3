@@ -9,10 +9,7 @@
     <meta property="og:description" content="Agência Criativa">
     <meta property="og:image" content="https://ago3.com.br/og.jpg">
     <meta property="og:url" content="https://ago3.com.br">
-    <meta name="twitter:card" content="summary_large_image">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
     <style>
@@ -20,61 +17,66 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #92FF00; /* Cor verde da referência */
+            align-items: center; 
+            height: 100vh;
+            background-color: #92FF00; /* Verde da marca */
             font-family: 'Open Sans', sans-serif;
-            text-align: center;
+            overflow: hidden;
         }
 
         .container {
-            width: 90%;
-            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            /* Move o conteúdo para cima em vertical */
+            margin-top: -15vh; 
         }
 
         .logo {
-            max-width: 500px; /* Tamanho do logo ajustado */
+            width: 140px; /* Tamanho ajustado conforme referência */
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .frase {
-            font-weight: 300; /* Light */
-            font-size: 46pt; /* Tamanho exato solicitado */
+            font-weight: 300;
+            font-size: 20pt; /* Tamanho reduzido para caber em uma linha */
             color: #000000;
-            margin-bottom: 40px;
-            line-height: 1.2;
+            margin: 0 0 35px 0;
+            white-space: nowrap; /* Força a ficar em uma linha só */
         }
 
         .social-links {
             display: flex;
-            gap: 30px;
-            justify-content: center;
+            gap: 12px;
         }
 
-        .social-links a {
+        .btn {
+            background-color: #7100FF; /* Roxo exato da referência */
+            color: white;
             text-decoration: none;
-            transition: opacity 0.3s;
+            padding: 10px 40px;
+            border-radius: 50px; /* Bordas abauladas */
+            font-size: 13pt;
+            font-weight: bold;
+            transition: background-color 0.2s;
         }
 
-        .social-links a:hover {
-            opacity: 0.7;
+        .btn:hover {
+            background-color: #5a00cc;
         }
 
-        .social-links img {
-            width: 40px; /* Tamanho dos ícones */
-            height: auto;
-        }
-
-        /* Ajuste para telas menores (Celular) */
-        @media (max-width: 600px) {
-            .frase {
-                font-size: 28pt;
+        /* Ajuste responsivo para celulares pequenos */
+        @media (max-width: 480px) {
+            .frase { 
+                font-size: 14pt; 
+                white-space: normal; /* No celular permite quebra se for muito pequeno */
             }
-            .logo {
-                max-width: 80%;
+            .btn {
+                padding: 10px 25px;
+                font-size: 11pt;
             }
         }
     </style>
@@ -83,16 +85,12 @@
 
     <div class="container">
         <img src="logo-transparente.png" alt="Logo AGO3" class="logo">
-
-        <h1 class="frase">Agência criativa em São José do Rio Preto.</h1>
+        
+        <p class="frase">Agência criativa em São José do Rio Preto.</p>
 
         <div class="social-links">
-            <a href="https://www.instagram.com/ago3.agencia/" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
-            </a>
-            <a href="https://wa.me/5517996750980" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384055.png" alt="WhatsApp">
-            </a>
+            <a href="https://www.instagram.com/ago3.agencia/" target="_blank" class="btn">Instagram</a>
+            <a href="https://wa.me/5517996750980" target="_blank" class="btn">WhatsApp</a>
         </div>
     </div>
 
