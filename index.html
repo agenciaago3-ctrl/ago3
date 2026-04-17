@@ -32,7 +32,7 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-top: -10vh; 
+            margin-top: -15vh; 
         }
 
         .logo {
@@ -46,7 +46,12 @@
             font-size: 20pt; 
             color: #000000;
             margin: 0 0 35px 0;
-            white-space: nowrap; 
+            white-space: nowrap; /* Garante uma linha no PC */
+        }
+
+        /* Esconde a quebra de linha no computador */
+        .only-mobile {
+            display: none;
         }
 
         .social-links {
@@ -66,24 +71,28 @@
             display: inline-block;
         }
 
-        /* AJUSTES EXCLUSIVOS PARA CELULAR */
+        /* ESTRUTURA PARA CELULAR (MOBILE) */
         @media (max-width: 600px) {
             .container {
-                margin-top: -5vh; /* Ajusta a altura no mobile */
+                margin-top: -5vh; 
             }
             .frase { 
-                font-size: 18px; /* Tamanho solicitado: 18px */
-                white-space: normal; /* Permite a quebra de linha */
+                font-size: 18px; /* Tamanho exato pedido */
+                white-space: normal; /* Permite a quebra no mobile */
                 line-height: 1.4;
-                width: 90%;
+                width: 95%;
+            }
+            /* Mostra a quebra de linha apenas no mobile */
+            .only-mobile {
+                display: block;
             }
             .social-links {
-                flex-direction: column; /* Empilha os botões verticalmente */
+                flex-direction: column; /* Empilha os botões */
                 gap: 15px;
                 width: 100%;
             }
             .btn {
-                width: 200px; /* Largura fixa para os botões ficarem iguais no celular */
+                width: 200px;
                 padding: 12px 0;
             }
         }
@@ -94,7 +103,9 @@
     <div class="container">
         <img src="logo-transparente-ago3.png" alt="Logo AGO3" class="logo">
         
-        <p class="frase">Agência criativa em <br> São José do Rio Preto.</p>
+        <p class="frase">
+            Agência criativa em<span class="only-mobile"><br></span> São José do Rio Preto.
+        </p>
 
         <div class="social-links">
             <a href="https://www.instagram.com/ago3.agencia/" target="_blank" class="btn">Instagram</a>
