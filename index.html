@@ -20,7 +20,7 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center; 
+            align-items: center; /* Centralização Vertical Total */
             height: 100vh;
             background-color: #92FF00;
             font-family: 'Open Sans', sans-serif;
@@ -32,13 +32,13 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-top: -15vh; 
+            /* Removido o margin-top negativo para centralizar perfeitamente no PC */
         }
 
         .logo {
-            width: 140px; 
+            width: 280px; /* Dobro do tamanho anterior (140px -> 280px) */
             height: auto;
-            margin-bottom: 4px;
+            margin-bottom: 10px;
         }
 
         .frase {
@@ -46,10 +46,9 @@
             font-size: 20pt; 
             color: #000000;
             margin: 0 0 35px 0;
-            white-space: nowrap; /* Garante uma linha no PC */
+            white-space: nowrap; 
         }
 
-        /* Esconde a quebra de linha no computador */
         .only-mobile {
             display: none;
         }
@@ -73,21 +72,20 @@
 
         /* ESTRUTURA PARA CELULAR (MOBILE) */
         @media (max-width: 600px) {
-            .container {
-                margin-top: -5vh; 
+            .logo {
+                width: 180px; /* Logo maior no mobile também */
             }
             .frase { 
-                font-size: 18px; /* Tamanho exato pedido */
-                white-space: normal; /* Permite a quebra no mobile */
-                line-height: 1.4;
-                width: 95%;
+                font-size: 18px;
+                white-space: normal;
+                line-height: 1.2; /* Ajuste do entre linhas (mais próximo) */
+                width: 90%;
             }
-            /* Mostra a quebra de linha apenas no mobile */
             .only-mobile {
                 display: block;
             }
             .social-links {
-                flex-direction: column; /* Empilha os botões */
+                flex-direction: column;
                 gap: 15px;
                 width: 100%;
             }
